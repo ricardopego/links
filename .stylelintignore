@@ -1,0 +1,17 @@
+# Ignore source code files; Stylelint should only lint CSS-like files
+**/*.ts
+**/*.tsx
+**/*.js
+**/*.jsx
+
+# Common directories to ignore
+node_modules
+.dist
+build
+.expo
+.next
+
+# Generated or asset files
+**/*.png
+**/*.jpg
+**/*.svg
