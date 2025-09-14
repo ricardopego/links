@@ -1,19 +1,19 @@
 import { StyleSheet } from "react-native";
+
 import { colors } from "@/styles/colors";
 
 export const styles = StyleSheet.create({
     container:{
-        flexDirection: 'row',
+        height: 52,
+        width: '100%',
+        backgroundColor: colors.green[300],
+        borderRadius: 8,
+        justifyContent: 'center',
         alignItems: 'center',
-        gap: 5,
     },
-    primaryTitle:{
-        color: colors.green[300],
+    title:{
+        color: colors.green[900],
         fontSize: 16,
         fontWeight: '600',
-    },
-    secondTitle:{
-        color: colors.gray[400],
-        fontSize: 16,
     },
 })

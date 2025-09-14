@@ -10,6 +10,7 @@ export default function Layout() {
             screenOptions={{
                 headerShown: false,
                 contentStyle: { backgroundColor },
+                animation: 'slide_from_right',
             }}
         />
     )

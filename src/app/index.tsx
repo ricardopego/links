@@ -1,6 +1,7 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { FlatList, Image, Modal, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { router } from "expo-router";
 
 import { Categories } from "@/components/categories";
 import { Link } from "@/components/link";
@@ -17,7 +18,7 @@ export default function Index() {
             <View style={styles.header}>
                 <Image source={require('@/assets/logo.png')} style={styles.logo}/>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => router.navigate('/add')}>
                     <MaterialIcons name='add' size={32} color={colors.green[300]} />
                 </TouchableOpacity>
                 
@@ -26,7 +27,7 @@ export default function Index() {
             <Categories/>
 
             <FlatList
-                data={['1','2','3','4','5','6','7','8','9','10']}
+                data={['1','2','3','4','5']}
                 keyExtractor={(item) => item}
                 renderItem={() => (
                     <Link
@@ -44,7 +45,7 @@ export default function Index() {
                 <View style={styles.modal}>
                     <View style={styles.modalContent}>
                         <View style={styles.modalHeader}>
-                            <Text style={styles.modalCategory}>Course</Text>
+                            <Text style={styles.modalCategory}>Curso</Text>
 
                             <TouchableOpacity>
                                 <MaterialIcons
@@ -59,7 +60,7 @@ export default function Index() {
                         <Text style={styles.modalUrl}> https://www.rocketseat.com.br/</Text>
 
                         <View style={styles.modalFooter}>
-                            <Option name="Excluir" icon='delete' variant="secondary" />
+                            <Option name="Excluir" icon='delete' variant="secondary"/>
                             <Option name="Abrir" icon="language"/>
                         </View>
                     </View>

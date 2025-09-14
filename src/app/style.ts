@@ -42,6 +42,8 @@ export const styles = StyleSheet.create({
         borderTopColor: colors.gray[900],
         paddingBottom: 10,
         padding: 24,
+        borderTopLeftRadius: 35,
+        borderTopRightRadius: 35,
     },
     modalHeader:{
         width: '100%',
@@ -53,7 +55,7 @@ export const styles = StyleSheet.create({
         flex: 1,
         fontSize: 16,
         fontWeight: '500',
-        color: colors.gray[400]
+        color: colors.gray[400],
     },
     modalLinksName:{
         fontSize: 18,
@@ -66,7 +68,7 @@ export const styles = StyleSheet.create({
     },
     modalFooter:{
         flexDirection: 'row',
-        marginTop: 32,
+        marginTop: 20,
         width: '100%',
         justifyContent: 'space-between',
         borderTopWidth: 1,
